@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Fodona XD</title>
+</head>
+    <style>
+        .center{text-align: center;}
+        .soma{background-color: rgb(53, 58, 56); color: aliceblue; font-size: 225%;}
+        .nsei{margin-top: 50px; padding: 10px;}
+    </style>
+<body>
+    <div class="center">
+    <h1 class="soma">Soma</h1>
+    <p>Adicione o primeiro numero <input type="number" id="n1"></p>
+    <h1>+</h1>
+    <p>Adicione o segundo numero <input type="number" id="n2"></p>
+    <button class="nsei" id="botao">Somar</button>
+    <p id="resultado"></p>
+
+    </div>
+    <script>
+        let botao = document.getElementById("botao")
+        botao.addEventListener("click", function(){
+            
+            let n1 = parseInt(document.getElementById('n1').value)
+            let n2 = parseInt(document.getElementById('n2').value)
+            let soma = n1 + n2
+            
+            //como testar o programa
+            // 1) console.log("clicaram");
+            // 2) alert("clicaram")
+
+            //como realmente se faz
+            document.getElementById("resultado").innerText = "A soma é: " + soma
+        })
+    </script>
+</body>
+</html>
